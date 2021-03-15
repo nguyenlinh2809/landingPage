@@ -1,0 +1,6 @@
+<div class="container-fluid editor-page">
+  <div class="editor-page-btns">
+    <button class="btn btn-primary p-2 mr-5" (click)="exportHtml()">Save Template</button>
+  </div>
+  <email-editor (loaded)="editorLoaded($event)"></email-editor>
+</div>

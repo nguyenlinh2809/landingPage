@@ -1,0 +1,35 @@
+.progress-loader {
+
+  z-index: 999;
+
+  .loading-spinner{
+    background-color: #00000078;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    z-index: 20;
+
+    .spinner-border {
+      width: 100px;
+      height: 100px;
+
+      position: absolute;
+      top: 20%;
+      left: 50%;
+    }
+  }
+
+  .loading-spinner img{
+    align-self: end;
+  }
+
+  .loading-message{
+    text-align: center;
+    align-self: start;
+  }
+}

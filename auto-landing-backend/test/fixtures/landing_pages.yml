@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content_json: MyString
+  string,: MyString
+  content_html: MyString
+  string,: MyString
+  status: MyString
+  boolean: MyString
+
+two:
+  content_json: MyString
+  string,: MyString
+  content_html: MyString
+  string,: MyString
+  status: MyString
+  boolean: MyString

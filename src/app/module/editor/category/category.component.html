@@ -1,0 +1,28 @@
+<div class="col-12 category mt-5">
+  <div class="category-select">
+    <select class="form-control form-control-lg col-4" (change)="onSelectCategory()" [(ngModel)]="selectedCategoryId">
+      <option *ngFor="let category of categories; let i = index" [value]="category.id">{{category.name}}</option>
+    </select>
+  </div>
+  <div class="category-list">
+    <ng-container *ngIf="landingPages.length > 0; else noData">
+      <div class="card" *ngFor="let landingPage of landingPages">
+        <div class="card-img">
+          <img class="card-img-top" [src]="BASE_RESOURCE_URL + landingPage.image_url.url">
+        </div>
+        <h5 class="card-title">{{landingPage.name}}</h5>
+        <div class="card-body">
+          <button class="btn btn-primary" (click)="goToEditor(landingPage)">go to editor</button>
+        </div>
+      </div>
+    </ng-container>
+    <div class="card card__plus" (click)="goToEditor()">
+      <i class="fa fa-plus" aria-hidden="true"></i>
+    </div>
+    <ng-template #noData>
+      <!-- <div class="no-data">
+        No data
+      </div> -->
+    </ng-template>
+  </div>
+</div>

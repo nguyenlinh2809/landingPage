@@ -1,0 +1,37 @@
+.mat-dialog-content {
+  display: flex;
+  flex-direction: column;
+}
+.category {
+
+  &-file {
+    font-size: 18px;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &-btn {
+    display: flex;
+    justify-content: center;
+    .btn {
+      font-size: 1.2rem;
+    }
+    .btn--save {
+      width: 100px;
+    }
+  }
+
+  &-select, &-name {
+    &__error {
+      font-style: italic;
+      color: red;
+    }
+    &__txt {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+}

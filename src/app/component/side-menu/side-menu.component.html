@@ -1,0 +1,61 @@
+<div class="wrapper">
+  <!-- Sidebar  -->
+  <nav id="sidebar" #sidebar>
+      <div class="sidebar-header">
+          <h3>Landing Page CMS</h3>
+      </div>
+
+      <ul class="list-unstyled components">
+          <p>Menu</p>
+          <li routerLinkActive="active">
+            <a routerLink="/landing/category">Category Manager</a>
+          </li>
+          <li routerLinkActive="active">
+            <a routerLink="/landing/editor">Landing Page Template</a>
+          </li>
+          <!-- <li routerLinkActive="active">
+              <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Landing Page Manager</a>
+              <ul class="collapse list-unstyled" id="homeSubmenu">
+                  <li routerLinkActive="active">
+                      <a routerLink="/landing/manage/saved-page">Saved Page</a>
+                  </li>
+                  <li routerLinkActive="active">
+                      <a routerLink="/landing/manage/created-page">Created Page</a>
+                  </li>
+              </ul>
+          </li> -->
+          <li routerLinkActive="active">
+            <a routerLink="/landing/manage/saved-page">Your Template</a>
+          </li>
+      </ul>
+  </nav>
+
+  <!-- Page Content  -->
+  <div id="content">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+
+              <button type="button" id="sidebarCollapse" class="btn btn-info" (click)="onToggleSideBar()">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="nav navbar-nav ml-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link">Hello admin<span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" (click)="onLogout()">Log out</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+
+      <div class="container-fluid">
+        <router-outlet></router-outlet>
+      </div>
+  </div>
+</div>
+
